@@ -1,0 +1,11 @@
+package org.atp.sportyshoes.repositories;
+
+import org.atp.sportyshoes.entities.Users;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserRepository extends JpaRepository<Users, Long> {
+
+    public Users findByUsername(String username);
+
+    public Users findByEmail(String email);
+}
